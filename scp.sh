@@ -1,0 +1,1 @@
+scp -r dist/ root@123.57.183.193:/home/qianxi/pc
