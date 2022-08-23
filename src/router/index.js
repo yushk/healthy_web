@@ -58,22 +58,40 @@ export const asyncRoutes = [
     component: Layout,
     meta: { title: '数据管理', icon: 'el-icon-box' },
     children: [{
-      path: 'base',
+      path: '/data',
       name: 'Base',
       component: () => import('@/views/data/base/index'),
-      meta: { title: '基础数据管理', icon: 'el-icon-tickets' ,roles: ['worker'] }
+      meta: { title: '基础数据管理', icon: 'el-icon-tickets', roles: ['worker'] }
     },
     {
-      path: 'sport',
+      path: 'sportmanager',
       name: 'Sport',
       component: () => import('@/views/data/sport/index'),
-      meta: { title: '运动数据管理', icon: 'el-icon-bicycle' ,roles: ['worker']}
+      meta: { title: '运动数据管理', icon: 'el-icon-bicycle', roles: ['worker'] }
     },
     {
       path: 'case',
       name: 'Case',
       component: () => import('@/views/data/case/index'),
-      meta: { title: '病例数据管理', icon: 'el-icon-service' ,roles: ['worker']}
+      meta: { title: '病例数据管理', icon: 'el-icon-service', roles: ['worker'] }
+    },
+    {
+      path: 'test',
+      name: 'Test',
+      component: () => import('@/views/data/test/index'),
+      meta: { title: '测评数据明细', icon: 'el-icon-tickets', roles: ['worker'] }
+    },
+    {
+      path: 'testanalyse',
+      name: 'TestAnalyse',
+      component: () => import('@/views/data/test_analyse/index'),
+      meta: { title: '测评数据分析', icon: 'el-icon-s-data', roles: ['worker'] }
+    },
+    {
+      path: 'prescription',
+      name: 'Prescription',
+      component: () => import('@/views/data/prescription/index'),
+      meta: { title: '运动处方', icon: 'el-icon-receiving', roles: ['worker'] }
     }
     ]
   },
